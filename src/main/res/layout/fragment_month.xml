@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 月份导航栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnPrevMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹" />
+
+        <TextView
+            android:id="@+id/tvCurrentMonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2024年01月"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›" />
+
+    </LinearLayout>
+
+    <!-- 星期标题 -->
+    <GridView
+        android:id="@+id/gridWeekDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="7"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 日历网格 -->
+    <GridView
+        android:id="@+id/gridCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="7"
+        android:gravity="center"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp" />
+
+    <!-- 🆕 当月节气显示区域 -->
+    <LinearLayout
+        android:id="@+id/layoutMonthSolarTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F8F9FA"
+        android:padding="16dp"
+        android:layout_marginTop="32dp"
+        android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tvSolarTermTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本月节气"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutSolarTermsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>
+
+    </LinearLayout>
